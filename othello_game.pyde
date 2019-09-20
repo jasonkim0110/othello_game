@@ -10,7 +10,7 @@ HEIGHT = 800
 SPACING = 100
 COMP_TIME_DELAY = 0.7
 
-# Initiate board and game controller
+# Initiate game controller and board
 game_controller = GameController(WIDTH, HEIGHT, SPACING)
 
 def setup():

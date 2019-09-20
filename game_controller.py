@@ -11,13 +11,13 @@ import re
 class GameController:
     """A game controller for Othello"""
 
-    def __init__(self, WIDTH, HEIGHT, SPACING): # , board):
+    def __init__(self, WIDTH, HEIGHT, SPACING):
         """GameController constructor. Takes Width, Height, Spacing, and board
         as inputs"""
         self.WIDTH = WIDTH
         self.HEIGHT = HEIGHT
         self.SPACING = SPACING
-        self.board = Board(WIDTH, HEIGHT, SPACING) # board
+        self.board = Board(WIDTH, HEIGHT, SPACING)
         self.player = Player(self.board)
         self.computer = Computer(self.board)
         self.player_turn = True
