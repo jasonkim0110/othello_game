@@ -25,3 +25,10 @@ class Tile:
         else:
             print("This tile has no disk to color swap!")
             return False
+    
+    def __repr__(self):
+        "Represents a tile with the row, col, and disk."
+        return ("[" + str(self.row)
+                + ", " + str(self.column)
+                + "]: " + str(self.disk))
+

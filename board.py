@@ -3,7 +3,6 @@ from tile import Tile
 # Jonah Golden
 # A board for the othello game
 
-
 class Board():
     """A class for an Othello board"""
 
@@ -105,3 +104,9 @@ class Board():
         # Set end of game message based on outcome of game
         self.end_message = ("Game over. " + message + "\nYou've got " +
                             str(self.total_black_disks) + " tiles\n")
+
+    def print_board(self):
+        "Prints a formatted version the board tiles."
+        for row in self.rows:
+            print("".join(str(row)))
+
