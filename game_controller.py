@@ -1,3 +1,4 @@
+from board import Board
 from player import Player
 from computer import Computer
 import time
@@ -10,15 +11,15 @@ import re
 class GameController:
     """A game controller for Othello"""
 
-    def __init__(self, WIDTH, HEIGHT, SPACING, board):
+    def __init__(self, WIDTH, HEIGHT, SPACING): # , board):
         """GameController constructor. Takes Width, Height, Spacing, and board
         as inputs"""
         self.WIDTH = WIDTH
         self.HEIGHT = HEIGHT
         self.SPACING = SPACING
-        self.board = board
-        self.player = Player(board)
-        self.computer = Computer(board)
+        self.board = Board(WIDTH, HEIGHT, SPACING) # board
+        self.player = Player(self.board)
+        self.computer = Computer(self.board)
         self.player_turn = True
         self.game_over = False
         self.do_prompt = False

@@ -1,4 +1,3 @@
-from board import Board
 from game_controller import GameController
 import time
 
@@ -12,9 +11,7 @@ SPACING = 100
 COMP_TIME_DELAY = 0.7
 
 # Initiate board and game controller
-board = Board(WIDTH, HEIGHT, SPACING)
-game_controller = GameController(WIDTH, HEIGHT, SPACING, board)
-
+game_controller = GameController(WIDTH, HEIGHT, SPACING)
 
 def setup():
     size(WIDTH + 200, HEIGHT)
