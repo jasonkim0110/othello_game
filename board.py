@@ -106,7 +106,7 @@ class Board():
                             str(self.total_black_disks) + " tiles\n")
 
     def print_board(self):
-        "Prints a formatted version the board tiles."
+        "Prints a formatted version of the board tiles."
         for row in self.rows:
             print("".join(str(row)))
 
