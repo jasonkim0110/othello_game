@@ -7,6 +7,8 @@ import re
 # Jonah Golden
 # A game controller for Othello game
 
+BLACK = 0
+WHITE = 255
 
 class GameController:
     """A game controller for Othello"""
@@ -18,8 +20,8 @@ class GameController:
         self.HEIGHT = HEIGHT
         self.SPACING = SPACING
         self.board = Board(WIDTH, HEIGHT, SPACING)
-        self.player = Player(self.board)
-        self.computer = Computer(self.board)
+        self.player = Player(self.board, BLACK)
+        self.computer = Computer(self.board, WHITE)
         self.player_turn = True
         self.game_over = False
         self.do_prompt = False

@@ -3,16 +3,8 @@ from game_player import GamePlayer
 # Jonah Golden
 # A computer player class, which extendes GamePlayer
 
-WHITE = 255
-
-
 class Computer(GamePlayer):
     """A class for the computer player"""
-
-    def __init__(self, board):
-        """Computer constructor. Takes board as input"""
-        self.board = board
-        self.color = WHITE
 
     def first_disks(self):
         """Add first two disks to board"""

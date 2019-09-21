@@ -1,8 +1,13 @@
-
+from abc import ABCMeta, abstractmethod
 
 class GamePlayer:
     """Game player class. This contains code that is common to the player and
     computer classes."""
+
+    def __init__(self, board, color):
+        """Game player constructor with a board and a color for player's disks."""
+        self.board = board
+        self.color = color
 
     def add_disk(self, tile):
         """Add a disk to the board"""
