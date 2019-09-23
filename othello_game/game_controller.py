@@ -120,25 +120,25 @@ class GameController:
 
     def record_score(self):
         """Record score in scores.txt"""
-        with open('scores.txt', 'r') as f:
+        with open('../scores.txt', 'r') as f:
             previous_scores = f.read()
         
         # Write at top of scores if it's a high score
         if self.high_score():
-            with open('scores.txt', 'w') as f:
+            with open('../scores.txt', 'w') as f:
                 f.write(self.user_name + " " +
                         str(self.board.total_black_disks) + "\n")
                 f.write(previous_scores)
         
         # Write at bottom of scores if it's not a high score
         else:
-            with open('scores.txt', 'a') as f:
+            with open('../scores.txt', 'a') as f:
                 f.write(self.user_name + " " +
                         str(self.board.total_black_disks) + "\n")
 
     def high_score(self):
         """Check if score is a high score"""
-        with open('scores.txt', 'r') as f:
+        with open('../scores.txt', 'r') as f:
             previous_scores = f.read()
             for score in re.findall(r'(\d+)\n', previous_scores):
                 if self.board.total_black_disks <= int(score):

@@ -6,12 +6,13 @@ import time
 
 # Set constants
 COMP_TIME_DELAY = 0.7
+SIZE = 800
 
 # Initiate game controller and board
 game_controller = GameController()
 
 def setup():
-    size(WIDTH + 200, HEIGHT)
+    size(SIZE + 200, SIZE)
     game_controller.start_game()
 
 
