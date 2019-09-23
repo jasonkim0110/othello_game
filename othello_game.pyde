@@ -5,13 +5,10 @@ import time
 # An Othello game
 
 # Set constants
-WIDTH = 800
-HEIGHT = 800
-SPACING = 100
 COMP_TIME_DELAY = 0.7
 
 # Initiate game controller and board
-game_controller = GameController(WIDTH, HEIGHT, SPACING)
+game_controller = GameController()
 
 def setup():
     size(WIDTH + 200, HEIGHT)

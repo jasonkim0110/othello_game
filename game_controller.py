@@ -13,7 +13,7 @@ WHITE = 255
 class GameController:
     """A game controller for Othello"""
 
-    def __init__(self, WIDTH, HEIGHT, SPACING):
+    def __init__(self, WIDTH = 800, HEIGHT = 800, SPACING = 100):
         """GameController constructor. Takes Width, Height, Spacing, and board
         as inputs"""
         self.WIDTH = WIDTH
